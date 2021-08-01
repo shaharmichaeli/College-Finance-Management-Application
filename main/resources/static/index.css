@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: 30% 70%;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: "Myriad Pro Light", sans-serif;
+    background: linear-gradient(45deg, #4ecdc4, #556270);
+    color:#FFEBE7;
+}
+
+.viewPage {
+    display: grid;
+    grid-template-rows: 10% 70% 10%;
+}
+
+.topList {
+    list-style: none;
+    padding: 0;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    list-style: none;
+    padding: 1vh;
+}
+
+.listItem {
+    border-bottom: solid 1px #FFEBE7 ;
+    padding: 1vh 7vh;
+    width: 4vw;
+    text-align: center;
+    color: #FFEBE7;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.innerListItem {
+    border: none;
+    text-align: center;
+    width: 4vw;
+}
+
+.balanceText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.title {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.navigationSection {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    position: relative;
+}
+
+.button {
+    padding: 2vh;
+    margin: 2vh;
+    width: 15vw;
+    font-size: 1.5rem;
+    border-radius: 2px;
+    color: black;
+    border: none;
+    background: #FFEBE7;  /* fallback for old browsers */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    outline: none;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.small_button {
+    padding: 1vh;
+    margin: 2vh;
+    width: 7vw;
+    font-size: 1.2rem;
+}
+
+
+.login_textbox {
+    padding: 1vh 10vw;
+    border: none;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    outline: none;
+    text-align: center;
+    font-size: 1.2rem;
+    background: #FFEBE7;
+
+}
+
+.login_button {
+    padding: 1vh;
+    margin: 2vh 2vh;
+    width: 10vw;
+    font-size: 1.2rem;
+    background: #FFEBE7;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.login_button:hover {
+    opacity: 0.7;
+}

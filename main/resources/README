@@ -1,0 +1,17 @@
+1. Put all the files in the same folder for this to work.
+2. It's okay to start whichever page first but index.html is the main page.
+3. For now, only "add student" button works to add a dummy student
+   And whenever you open student.html there is an onload function (that works
+   as soon as the page loads) to fill the student array automatically.
+4. In order for the functions and everything to work we need to configure our server
+   so it accepts communication with our "unknown" client.
+   To do so - in our controller class in the server applet we add the
+   @CrossOrigin(origins = "<our computer's url>") statement on top of our class name,
+   right above @RestController.
+   In the case we don't know our computer's url or we want to work offline we can enter
+   a wildcard - *.
+   @CrossOrigin(origins = "*") <- like this.
+   Remember not to push or commit the wildcard because it is a security vulnerability.
+5. After adding the clause the requests should work so you can add the dummy value by
+   clicking the "add student" button on the office.html page and then see it
+   in the list on student.html page.

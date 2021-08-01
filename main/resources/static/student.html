@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <script src="student.js"></script>
+</head>
+<body onload="displayStudentData()" class="viewPage">
+<header class="title">
+    <h1 id="studentName">Welcome Student Name!</h1> <!-- TODO Student name to be set dynamically -->
+</header>
+<section class="navigationSection">
+    <h2 class="title">Balance Report</h2>
+    <ul class="list">
+        <li class="listItem">Course Number</li>
+        <li class="listItem">Course Name</li>
+        <li class="listItem">Credits</li>
+        <li class="listItem">Price</li>
+    </ul>
+    <ul id="studentCourseList" class="topList">
+        <ul class="list">
+            <li class="listItem innerListItem">10121</li>
+            <li class="listItem innerListItem">Linear Algebra</li>
+            <li class="listItem innerListItem">5</li>
+            <li class="listItem innerListItem">1000</li>
+        </ul>
+        <ul class="list">
+            <li class="listItem innerListItem">10122</li>
+            <li class="listItem innerListItem">Chemistry</li>
+            <li class="listItem innerListItem">4</li>
+            <li class="listItem innerListItem">750</li>
+        </ul>
+        <ul class="list">
+            <li class="listItem innerListItem">10123</li>
+            <li class="listItem innerListItem">Mechanics</li>
+            <li class="listItem innerListItem">3</li>
+            <li class="listItem innerListItem">750</li>
+        </ul>
+    </ul>
+    <h2 id="studentBalance" class="balanceText">Balance: ₪</h2> <!-- TODO Update balance dynamically-->
+</section>
+</body>
+</html>

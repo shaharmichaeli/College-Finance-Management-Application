@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box
+}
+*, *::before, *::after {
+    box-sizing: inherit
+}
+
+.reportBody {
+    display: grid;
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 4vh;
+    grid-template-rows: 10% 30% 30%;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: "Myriad Pro Light", sans-serif;
+    background: linear-gradient(45deg, #4ecdc4, #556270);
+    color:#FFEBE7;
+}

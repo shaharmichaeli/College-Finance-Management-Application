@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Office View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="office.css">
+    <script src="./office.js"></script>
+</head>
+<body class="officeBody">
+<div id="addStudentModal" class="modal" onclick="closeStudentModal()">
+    <div id="addStudentModalContent" class="modalContent">
+        <span id="modalExitButtonStudent" class="modalExitButton" onclick="closeStudentModal()">&#10005</span>
+        <h3 class="modalHeader">Enter new student details</h3>
+        <div class="modalInputDiv">
+            <label class="inputFieldLabel" for="inputEmailStudent">Email:</label>
+            <input id="inputEmailStudent" class="inputField" type="email" name="email" required>
+        </div>
+        <div>
+            <label class="inputFieldLabel" for="inputUsernameStudent">Username:</label>
+            <input id="inputUsernameStudent" class="inputField" type="text" name="username" required>
+        </div>
+        <div>
+            <label class="inputFieldLabel" for="inputAvatarStudent">Avatar:</label>
+            <input id="inputAvatarStudent" class="inputField" type="text" name="avatar" required>
+        </div>
+        <div>
+            <label class="inputFieldLabel" for="inputNameStudent">Name:</label>
+            <input id="inputNameStudent" class="inputField" type="text" name="name" required>
+        </div>
+        <div>
+            <label class="inputFieldLabel" for="inputBalanceStudent">Balance:</label>
+            <input id="inputBalanceStudent" class="inputField" type="number" name="balance" required>
+        </div>
+        <button id="addStudentButtonStudent" class="modalButton" onclick="addNewStudent()">Add Student</button>
+    </div>
+</div>
+<div id="addWorkerModal" class="modal" onclick="closeWorkerModal()">
+    <div id="addWorkerModalContent" class="modalContent">
+        <span id="modalExitButtonWorker" class="modalExitButton" onclick="closeWorkerModal()">&#10005</span>
+        <h3 class="modalHeader">Enter new worker details</h3>
+        <div class="modalInputDiv">
+            <label class="inputFieldLabel" for="inputEmailWorker">Email:</label>
+            <input id="inputEmailWorker" class="inputField" type="email" name="email" required>
+        </div>
+        <div>
+            <label class="inputFieldLabel" for="inputUsernameWorker">Username:</label>
+            <input id="inputUsernameWorker" class="inputField" type="text" name="username" required>
+        </div>
+        <div>
+            <label class="inputFieldLabel" for="inputAvatarWorker">Avatar:</label>
+            <input id="inputAvatarWorker" class="inputField" type="text" name="avatar" required>
+        </div>
+        <div>
+            <label class="inputFieldLabel" for="inputNameWorker">Name:</label>
+            <input id="inputNameWorker" class="inputField" type="text" name="name" required>
+        </div>
+        <div>
+            <label class="inputFieldLabel" for="inputPaymentWorker">Payment:</label>
+            <input id="inputPaymentWorker" class="inputField" type="number" name="payment" required>
+        </div>
+        <button id="addStudentButton" class="modalButton" onclick="addNewWorker()">Add Worker</button>
+    </div>
+</div>
+
+<div id="viewDetailsModalStudent" class="modal" onclick="closeSpecificStudentModal()">
+    <div id="specificStudentDetails" class="specificModal">
+        <span id="modalExitButtonSpecificStudent" class="modalExitButton" onclick="closeSpecificStudentModal()">&#10005</span>
+        <canvas id="myCanvas" class="canvas" width="100" height="100">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <p id="specificStudentName">Name:</p>
+        <p id="specificStudentEmail">Email:</p>
+        <p id="specificStudentBalance">Balance:</p>
+        <button class="modalButton" onclick="alert('Sent payment request to student!');">Request Payment</button>
+    </div>
+</div>
+<div id="viewDetailsModalWorker" class="modal" onclick="closeSpecificWorkerModal()">
+    <div id="specificWorkerDetails" class="specificModal">
+        <span id="modalExitButtonSpecificWorker" class="modalExitButton" onclick="closeSpecificWorkerModal()">&#10005</span>
+        <canvas id="myCanvas2" class="canvas" width="100" height="100">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <p id="specificWorkerName">Name:</p>
+        <p id="specificWorkerEmail">Email:</p>
+        <p id="specificWorkerBalance">Payment:</p>
+        <button class="modalButton" onclick="alert('Sent payment to Worker!');">Send Payment</button>
+    </div>
+</div>
+
+<header class="title">
+    <h1>Welcome Office Name!</h1>
+    <h2>What would you like to do?</h2>
+</header>
+<section class="officeSection">
+    <h2>Student Managing</h2>
+    <hr>
+    <ul id="studentList" class="userList">
+        <ul class="innerList" onclick="openSpecificStudentModal()">
+            <li class="listItem" hidden>ID</li>
+            <li class="listItem">Avatar</li>
+            <li class="listItem">Full Name</li>
+            <li class="listItem">Email</li>
+            <li class="listItem">Balance</li>
+        </ul>
+    </ul>
+    <button class="button" onclick="openStudentModal()">Add Student</button>
+    <button class="button" onclick="generateStudentList()">Show Students</button>
+
+</section>
+<section class="officeSection">
+    <h2>Worker Managing</h2>
+    <hr>
+    <ul id="workerList" class="userList" onload="">
+        <ul class="innerList" onclick="openSpecificWorkerModal()">
+            <li class="listItem" hidden>ID</li>
+            <li class="listItem">Avatar</li>
+            <li class="listItem">Full Name</li>
+            <li class="listItem">Email</li>
+            <li class="listItem">Payment</li>
+        </ul>
+    </ul>
+    <button class="button" onclick="openWorkerModal()">Add Worker</button>
+    <button class="button" onclick="generateWorkerList()">Show Workers</button>
+</section>
+<section class="officeSection">
+    <h2>Finance Managing</h2>
+    <button class="button" onclick="generateReport()">Generate Report</button>
+</section>
+</body>
+</html>
